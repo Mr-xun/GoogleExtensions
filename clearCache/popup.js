@@ -1,9 +1,4 @@
-﻿/*
-* author:aggerChen
-*/
-document.addEventListener('DOMContentLoaded', function () {
-		
-	
+﻿document.addEventListener('DOMContentLoaded', function () {
 		$("#cleanBtn").on("click",function(){
 				$("#cleanBtn").attr('disabled',true);
 				$("#showMsg").text('缓存清除中...');
@@ -22,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			   });
         });
 });
-
 //获取选中的清理选项
 function getSelectDatas(){
 	var datas = $("input[name='cleanOpt']");			//获取清除哪些内容
