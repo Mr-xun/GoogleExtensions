@@ -11,7 +11,7 @@ chrome.commands.onCommand.addListener(function(command) {
   if (command == "cleanKey") {				//如果快捷键是指定的按钮
     toclean(1,{ "appcache": true,			//则调用执行清除方法
                 "cache": true,
-                "cookies": false,
+                "cookies": true,
                 // "downloads": false,
                 // "fileSystems": true,//文件系统
                 "formData": true,//表单数据
@@ -34,6 +34,7 @@ function toclean(days,data){
 			icon: 'clear48.png',
 			body: '清理缓存成功!',
 		});
+        chrome.tabs.reload();//刷新当前页面
 	});
 	
 }
